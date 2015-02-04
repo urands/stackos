@@ -8,6 +8,9 @@
 #ifndef __STACK_OS_H__
 #define __STACK_OS_H__
 
+
+#include <cmsis_os.h>
+
 //Defines for Stack OS
 #include "StackOS_Defines.h"
 
