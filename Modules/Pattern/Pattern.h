@@ -41,4 +41,8 @@
 
 //-------- <<< end of configuration section >>>    --------------------
 
+void PatternInit (const uint32_t mode); 
+void PatternTask (void const *arg); 
+
+
 #endif /* __MOD_PATTERN_H__ */

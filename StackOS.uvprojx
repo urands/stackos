@@ -364,7 +364,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Core;.\RTE</IncludePath>
+              <IncludePath>.\Core;.\RTE;.\Modules</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,6 +417,16 @@
               <FileType>5</FileType>
               <FilePath>.\Core\StackOS.h</FilePath>
             </File>
+            <File>
+              <FileName>StackOS_Function.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\src\StackOS_Function.c</FilePath>
+            </File>
+            <File>
+              <FileName>StackOS_Route.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Core\src\StackOS_Route.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -436,6 +446,16 @@
               <FileName>Pattern.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Modules\Pattern\Pattern.h</FilePath>
+            </File>
+            <File>
+              <FileName>PatternTestBench.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Modules\Pattern\src\PatternTestBench.c</FilePath>
+            </File>
+            <File>
+              <FileName>Pattern.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Modules\Pattern\src\Pattern.c</FilePath>
             </File>
           </Files>
         </Group>

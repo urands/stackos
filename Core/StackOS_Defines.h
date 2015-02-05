@@ -10,5 +10,20 @@
 
 /* Some results */
 
+#if ( osCMSIS < 0x10002 ) 
+	#error  "CMSIS version error" #osKernelSystemId
+#endif
+
+/* STACK OS ERROR CODES */
+#define OS_ERROR_STOS_START        10
+
+
+
+
+
+
+/* MACRO DEFINES */
+
+
 
 #endif /* __STACK_OS_DEFINES_H__ */

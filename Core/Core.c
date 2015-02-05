@@ -5,47 +5,17 @@
 *  History:
 *  						04.02.15 create
 */
-
 #include <StackOS.h>
 
-
-osThreadId tid_thread1; // ID for thread 1
-osThreadId tid_thread2; // for thread 2
-typedef struct { // Message object structure
-float voltage; // AD result of measured voltage
-float current; // AD result of measured current
-int counter; // A counter value
-	char sss[512];
-} T_MEAS;
-
-/*osPoolDef(mpool, 50, T_MEAS); // Define memory pool
-osPoolId mpool;
-*/
-osMessageQDef(MsgBox, 200, T_MEAS); // Define message queue
-osMessageQId MsgBox;
-
-
-//osMailQDef(mail, 113, T_MEAS); // Define mail queue
-//osMailQId mail;
-
-osMessageQId qury[10];
-
 int main(void){
-	
-	T_MEAS *mptr;
-	stosModuleDef aaaa;
-	
-	
-	
-	
-	aaaa.qid_send = qury;
-	// mpool = osPoolCreate(osPool(mpool)); // create memory pool
-	MsgBox = osMessageCreate(osMessageQ(MsgBox), NULL); // create msg queue
-	// mail = osMailCreate(osMailQ(mail), NULL); // create mail queue
-	
-	aaaa.qid_send[0] = aaaa.qid_send[ 50 ];
-
-
+		//Initialize StackOS
+		if ( stosInitialize() == osOK ){
+			//Start StackOS
+			if ( stosStart() == osOK ){
+				//Free resources from this thread
+				return 1;
+			}
+		}
 		return 0;
 }
 

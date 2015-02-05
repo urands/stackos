@@ -17,6 +17,9 @@
 //Interface module for Stack OS
 #include "StackOS_Interface.h"
 
+
+#include "StackOS_Function.h"
+
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
 
 
@@ -26,6 +29,10 @@
 #if ( STACKOS_DEBUG > 3 )
 	#error "Invalid debug inormation messages level!"
 #endif
+
+
+//   <o> Stack OS module count  <1-100>
+#define STACKOS_MODULE_COUNT			2
 
 
 
