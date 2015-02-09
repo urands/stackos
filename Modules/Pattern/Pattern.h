@@ -11,8 +11,12 @@
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
 
 
+//   <s> Module name 
+#define STOS_MODULE_NAME						Pattern
+
+
 // <e> Example menu 
-#define STOS_PATTERN_EXAMPLE				0
+#define STOS_PATTERN_EXAMPLE				1
 
 //   <o> High-speed Internal Clock <1-999999999>
 #define RTE_HSI                         8000000
@@ -23,10 +27,12 @@
 #define RTE_USART1_TX_PORT_DEF          GPIOA
 #define RTE_USART1_TX_BIT_DEF           9
 #else
-#error "Invalid USART1_TX Pin Configuration!"
+#error "Some error"
 #endif
 
 // </e>
+
+
 
 
 // <e> Enable test unit (Benchmark) 
@@ -40,9 +46,15 @@
 
 
 //-------- <<< end of configuration section >>>    --------------------
+#define macro(X) \
+void Module ##X## Init (const uint32_t mode); 
 
-void PatternInit (const uint32_t mode); 
+
 void PatternTask (void const *arg); 
+
+macro(STOS_MODULE_NAME)
+
+#undef STOS_MODULE_NAME
 
 
 #endif /* __MOD_PATTERN_H__ */

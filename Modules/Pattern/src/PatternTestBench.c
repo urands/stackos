@@ -8,6 +8,7 @@
 #include <StackOS.h>
 #include <Pattern/Pattern.h>
 
+#ifdef STOS_PATTERN_TESTBECH
 
 /* This is simple test  for this module */
 void PatternSimpleTest( void ){
@@ -42,3 +43,4 @@ void PatternTestBench( uint32_t select_testbench ){
 		}
 }
 
+#endif

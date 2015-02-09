@@ -23,6 +23,8 @@
 
 
 /* MACRO DEFINES */
+#define stosMOduleDef(X) \
+void Module ##X## Init (const uint32_t mode);
 
 
 
