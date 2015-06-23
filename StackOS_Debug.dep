@@ -1,63 +1,0 @@
-Dependencies for Project 'StackOS', Target 'Debug': (DO NOT MODIFY !)
-F (.\Core\Core.c)(0x54D35B7F)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\core.o --omf_browse .\debug\core.crf --depend .\debug\core.d)
-I (.\Core\StackOS.h)(0x54D35CF7)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (.\Core\StackOS_Defines.h)(0x54D36807)
-I (.\Core\StackOS_Interface.h)(0x54D37A33)
-I (.\Core\StackOS_Function.h)(0x54D35957)
-F (.\Core\StackOS.h)(0x54D35CF7)()
-F (.\Core\src\StackOS_Function.c)(0x54D374EB)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\stackos_function.o --omf_browse .\debug\stackos_function.crf --depend .\debug\stackos_function.d)
-I (.\Core\StackOS.h)(0x54D35CF7)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (.\Core\StackOS_Defines.h)(0x54D36807)
-I (.\Core\StackOS_Interface.h)(0x54D37A33)
-I (.\Core\StackOS_Function.h)(0x54D35957)
-F (.\Core\src\StackOS_Route.c)(0x54D37AB0)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\stackos_route.o --omf_browse .\debug\stackos_route.crf --depend .\debug\stackos_route.d)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (.\Core\StackOS.h)(0x54D35CF7)
-I (.\Core\StackOS_Defines.h)(0x54D36807)
-I (.\Core\StackOS_Interface.h)(0x54D37A33)
-I (.\Core\StackOS_Function.h)(0x54D35957)
-I (.\Modules\Pattern/Pattern.h)(0x54D372C0)
-F (.\Modules\Toolbox\Toolbox.h)(0x54D20003)()
-F (.\Modules\Pattern\Pattern.h)(0x54D372C0)()
-F (.\Modules\Pattern\src\PatternTestBench.c)(0x54D364B9)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\patterntestbench.o --omf_browse .\debug\patterntestbench.crf --depend .\debug\patterntestbench.d)
-I (.\Core\StackOS.h)(0x54D35CF7)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (.\Core\StackOS_Defines.h)(0x54D36807)
-I (.\Core\StackOS_Interface.h)(0x54D37A33)
-I (.\Core\StackOS_Function.h)(0x54D35957)
-I (.\Modules\Pattern/Pattern.h)(0x54D372C0)
-F (.\Modules\Pattern\src\Pattern.c)(0x54D372C8)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\pattern.o --omf_browse .\debug\pattern.crf --depend .\debug\pattern.d)
-I (.\Core\StackOS.h)(0x54D35CF7)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (.\Core\StackOS_Defines.h)(0x54D36807)
-I (.\Core\StackOS_Interface.h)(0x54D37A33)
-I (.\Core\StackOS_Function.h)(0x54D35957)
-I (.\Modules\Pattern/Pattern.h)(0x54D372C0)
-F (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Lib\ARM\arm_cortexM3l_math.lib)(0x537353F2)()
-F (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\LIB\ARM\RTX_CM3.lib)(0x5280B1B8)()
-F (RTE\CMSIS\RTX_Conf_CM.c)(0x54D21E6B)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\rtx_conf_cm.o --omf_browse .\debug\rtx_conf_cm.crf --depend .\debug\rtx_conf_cm.d)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\cmsis_os.h)(0x5280B1B8)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x53467284)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC\RTX_CM_lib.h)(0x52D8B568)
-F (RTE\Device\STM32F103RE\RTE_Device.h)(0x54D21BE2)()
-F (RTE\Device\STM32F103RE\startup_stm32f10x_hd.s)(0x4F1E667C)(--cpu Cortex-M3 --pd "__RTX SETA 1" -g --apcs=interwork -I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include--list .\listing\startup_stm32f10x_hd.lst --xref -o .\debug\startup_stm32f10x_hd.o --depend .\debug\startup_stm32f10x_hd.d)
-F (RTE\Device\STM32F103RE\system_stm32f10x.c)(0x4F1E667C)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork -I.\Core -I.\RTE -I.\Modules-I D:\project\tracker\latest\StackOS\RTE-I D:\project\tracker\latest\StackOS\RTE\Device\STM32F103RE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS_RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D_RTE_ -DSTM32F10X_HD-o .\debug\system_stm32f10x.o --omf_browse .\debug\system_stm32f10x.crf --depend .\debug\system_stm32f10x.d)
-I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include\stm32f10x.h)(0x5289B226)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53845F06)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53467284)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302DB10)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302DB10)
-I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include\system_stm32f10x.h)(0x4F1E667C)
