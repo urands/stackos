@@ -23,11 +23,11 @@
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
 
 
-//   <o> Debug inormation messages level <0=>Off <1=>Low <2=>Medium <3=>High
-//	 <i> Debug inormation messages sending or stop  on warnings  
+//   <o> Debug information messages level <0=>Off <1=>Low <2=>Medium <3=>High
+//	 <i> Debug information messages sending or stop  on warnings  
 #define STACKOS_DEBUG							3
 #if ( STACKOS_DEBUG > 3 )
-	#error "Invalid debug inormation messages level!"
+	#error "Invalid debug information messages level!"
 #endif
 
 

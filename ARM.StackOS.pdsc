@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package schemaVersion="1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>ARM</vendor>
+  <name>StackOS</name>
+  <description>StackOS simply module RTOS on RTX</description>
+  <url>https://github.com/urands/stackos/releases/stackos.zip</url>
+  <supportContact>ds@inbox.ru</supportContact>
+  <license>Docs\License.txt</license>
+  
+  <releases>
+    <release version="1.0.0" date="2015-10-02">
+      test pack installer
+    </release>
+  </releases>
+
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>stackos</keyword>
+  </keywords>
+
+  <!-- apis section (optional - for Application Programming Interface descriptions) -->
+  <!-- 
+  <apis>
+  </apis>
+  -->
+
+  <!-- boards section (mandatory for Board Support Packs) -->
+  <!-- 
+  <boards>
+  </boards>
+  -->
+
+  <!-- devices section (mandatory for Device Family Packs) -->
+  <!--
+  <devices>
+  </devices>
+  -->
+
+  <!-- examples section (optional for all Software Packs)-->
+  <!--
+  <examples>
+  </examples>
+  -->
+  
+  <!-- conditions section (optional for all Software Packs)-->
+  <!--
+  <conditions>
+  </conditions>
+  -->
+  
+  <!-- component section (optional for all Software Packs)-->
+  <!--
+  <components>
+  </components>
+  -->
+  
+  <!-- optional taxonomy section for defining new component Class and Group names -->
+  <!--
+  <taxonomy>
+  </taxonomy>
+  -->
+
+<conditions> 
+  <condition id="ARM Compiler">
+    <require Tcompiler="ARMCC"/>
+  </condition>
+  <condition id="CM0">
+    <description>Cortex-M0 based device</description>
+    <require condition="ARM Compiler"/>
+    <accept  Dcore="Cortex-M0"/>
+    <accept  Dcore="Cortex-M0+"/>
+  </condition>
+  <condition id="CM3">
+    <description>Cortex-M3 based device</description>
+    <require condition="ARM Compiler"/>
+    <accept  Dcore="Cortex-M3"/>
+  </condition>
+  <condition id="CM4_CM7">
+    <description>Cortex-M4 based device</description>
+    <require condition="ARM Compiler"/>
+    <accept  Dcore="Cortex-M4"/>
+    <accept  Dcore="Cortex-M7"/>
+  </condition>
+  <condition id="CMSIS Core with RTOS">
+    <description>CMSIS Core with RTOS for Cortex-M processor</description>
+    <accept  condition="CM0"/>
+    <accept  condition="CM3"/>
+    <accept  condition="CM4_CM7"/>
+    <require Cclass="CMSIS" Cgroup="CORE"/>
+    <require Cclass="CMSIS" Cgroup="RTOS"/>
+  </condition>
+</conditions>
+
+
+
+<components>
+    <component Cclass="MyClass" Cgroup="MyGroup" Csub="MySubGroup" Cversion="1.0.0" condition="CMSIS Core with RTOS">
+      <description>MySWComp</description>
+      <files>
+        <file category="doc"    name="Docs\MySWComp.htm"/>
+        <file category="header" name="MySWComp\header_mylib.h"/>
+        <file category="header" name="MySWComp\config_mylib.h" attr="config" version="1.0.0"/>
+        <file category="source" name="MySWComp\mylib_one.c"/>
+        <file category="source" name="MySWComp\mylib_two.c"/>
+      </files>
+    </component>
+</components>
+
+
+
+
+
+
+  
+</package>
