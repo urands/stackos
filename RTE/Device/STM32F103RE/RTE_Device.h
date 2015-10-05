@@ -45,7 +45,7 @@
 
 
 // <e> USART1 (Universal synchronous asynchronous receiver transmitter)
-#define RTE_USART1                       0
+#define RTE_USART1                       1
 
 //   <o> USART1_TX Pin <0=>PA9
 #define RTE_USART1_TX_PORT_ID_DEF       0

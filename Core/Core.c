@@ -7,6 +7,10 @@
 */
 #include <StackOS.h>
 
+
+
+STACKOS_MODULE mod, mod2;
+
 int main(void){
 		//Initialize StackOS
 		if ( stosInitialize() == osOK ){
@@ -16,6 +20,47 @@ int main(void){
 				return 1;
 			}
 		}
+		
+		mod.Initialize(NULL,0);
+		
+		mod2.Initialize(NULL,0);
+		
+		stosSetParametr(mod2, GSM_MODEM_TCP_CLIENT, confTcpClient);
+
+
+		stosSetIdle( mod2 );
+		
+		
+		
+		mod2.PowerControl( STACKOS_POWERUP );
+		
+		mod2.PowerControl( STACKOS_POWERDOWN );
+		
+		
+		mod2.PowerControl( STACKOS_STANDBY );
+
+
+		
+		
+		stosCommand(mod2, GSM_MODEM_POWER_UP, STACKOS_FAITFOREWER ):
+		
+		
+		stosCommand(mod2, GSM_MODEM_CONNECT, STACKOS_FAITFOREWER ):
+		
+		stosCommand(mod2, GSM_MODEM_POWER_UP, STACKOS_FAITFOREWER ):
+		
+		
+		stosPortConfigure(mod2, STACKOS_GSM_TCP_PORT, confGSMPort):
+		
+		stosPortConnect(mod, STACKOS_START_INPUT_PORT, mod2, STACKOS_GSM_TCP_PORT);
+		
+		mod.Start();
+		
+		mod2.Start();
+		
+		
+		
+		
 		return 0;
 }
 

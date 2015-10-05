@@ -20,6 +20,11 @@
 
 #include "StackOS_Function.h"
 
+
+//Interface module for Stack OS
+#include "StackOS_Module.h"
+
+
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
 
 
