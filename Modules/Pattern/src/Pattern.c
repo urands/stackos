@@ -9,6 +9,9 @@
 #include <Pattern/Pattern.h>
 
 
+stosPortDef(Pattern, 1);
+
+
 void PatternInit (const uint32_t mode){
 	
 	

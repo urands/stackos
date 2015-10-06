@@ -21,8 +21,7 @@
 #include "StackOS_Function.h"
 
 
-//Interface module for Stack OS
-#include "StackOS_Module.h"
+
 
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -36,7 +35,7 @@
 #endif
 
 
-//   <o> Stack OS module count  <1-100>
+//   <o> StackOS module count  <1-100>
 #define STACKOS_MODULE_COUNT			2
 
 

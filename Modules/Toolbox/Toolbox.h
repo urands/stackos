@@ -1,35 +1,87 @@
 /* 
-*  Project: StackOS/Module/Toolbox
+*  Project: StackOS/Module/Pattern
 *  Author: uran
 *  Description: Retarget stdio 
 *  History:
 *  						04.02.15 create
 */
-#ifndef __STACK_OS_H__
-#define __STACK_OS_H__
+#ifndef __MOD_TOOLBOX_H__
+#define __MOD_TOOLBOX_H__
 
-//-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
+#include <StackOS.h>
+
+// <<< Use Configuration Wizard in Context Menu >>> 
 
 
-// <e> Enable retarget stdio 
-#define STOS_TOOLBOX_RETARGET				0
+#define STOS_MODULE_NAME Toolbox
 
-//   <o> High-speed Internal Clock <1-999999999>
-#define RTE_HSI                         8000000
+//<e> Port defenition 
+#define STOS_PORTDEFINITION				1
 
-//   <o> USART1_TX Pin <0=>PA9
-#define RTE_USART1_TX_PORT_ID_DEF       0
-#if    (RTE_USART1_TX_PORT_ID_DEF == 0)
-#define RTE_USART1_TX_PORT_DEF          GPIOA
-#define RTE_USART1_TX_BIT_DEF           9
-#else
-#error "Invalid USART1_TX Pin Configuration!"
-#endif
+//<e> Port 0
+//	<o1>Direction <0=>Input <1=>Output
+//	<i> Direction
+//	<o2>Data type <0=>Raw data 
+//	<i> Port 0 direction
+//	<o3>Transfer type <0=>Asynchronous (non-blocking) <1=>Synchronous (blocking)
+//	<i> Transfer type <0=>Asynchronous (non-blocking) <1=>Synchronous (blocking)
+//	<o4>Query count <0-1000>
+//	<i> Query count <0-1000>
+//</e>
+#define STOS_MODULE_PORT0										1
+#define STOS_MODULE_PORT0_DIRECTION					1
+#define STOS_MODULE_PORT0_DATATYPE					0
+#define STOS_MODULE_PORT0_TRANSFERTYPE			0
+#define STOS_MODULE_PORT0_QUERYCOUNT				3
 
+
+//<e> Port 1
+//	<o1>Direction <0=>Input <1=>Output
+//	<i> Direction
+//	<o2>Data type <0=>Raw data 
+//	<i> Port 0 direction
+//	<o3>Transfer type <0=>Asynchronous (non-blocking) <1=>Synchronous (blocking)
+//	<i> Transfer type <0=>Asynchronous (non-blocking) <1=>Synchronous (blocking)
+//	<o4>Query count <0-1000>
+//	<i> Query count <0-1000>
+//</e>
+#define STOS_MODULE_PORT1										1
+#define STOS_MODULE_PORT1_DIRECTION					1
+#define STOS_MODULE_PORT1_DATATYPE					0
+#define STOS_MODULE_PORT1_TRANSFERTYPE			0
+#define STOS_MODULE_PORT1_QUERYCOUNT				3
+
+
+
+
+
+//</e>
+
+
+
+// <e> Enable test unit (Benchmark) 
+//   <o1> Select test unit <0=>Simple test <1=>Random data <2=>Some tests <3=>Hello world
+//	 <i> 
 // </e>
+#define STOS_MODULE_TESTBECH				1
+#define STOS_MODULE_TESTUNIT				3
 
 
-//-------- <<< end of configuration section >>>    --------------------
+
+// <<< end of configuration section >>>
+
+#include <StackOS_Module.h>
+
+//#define macro(X) \
+void Module ##X## Init (const uint32_t mode); 
 
 
-#endif
+void ToolboxTask (void const *arg); 
+
+
+
+//macro(STOS_MODULE_NAME)
+
+//#undef STOS_MODULE_NAME
+
+#endif /* __MOD_PATTERN_H__ */

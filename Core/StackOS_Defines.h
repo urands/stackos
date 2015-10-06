@@ -23,9 +23,14 @@
 
 
 /* MACRO DEFINES */
-#define stosMOduleDef(X) \
+#define stosModuleDef111(X) \
 void Module ##X## Init (const uint32_t mode);
 
+
+/* MACRO DEFINES */
+/* MACRO DEFINES */
+#define stosModuleDef11(X) \
+void Module ##X## Init (const uint32_t mode);
 
 
 #endif /* __STACK_OS_DEFINES_H__ */

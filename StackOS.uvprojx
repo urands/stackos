@@ -489,7 +489,7 @@
       </package>
       <package name="STM32F1xx_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="1.1.0">
         <targetInfos>
-          <targetInfo name="Debug"/>
+          <targetInfo name="Debug" versionMatchMode="fixed"/>
         </targetInfos>
       </package>
     </packages>
