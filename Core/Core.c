@@ -6,11 +6,7 @@
 *  						04.02.15 create
 */
 #include <StackOS.h>
-
 #include <Pattern/Pattern.h>
-
-#include <Toolbox/Toolbox.h>
-
 int main(void){
 
 

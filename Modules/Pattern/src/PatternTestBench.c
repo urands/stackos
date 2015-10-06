@@ -6,9 +6,21 @@
 *  						04.02.15 create
 */
 #include <StackOS.h>
-#include <Pattern/Pattern.h>
 
-#ifdef STOS_PATTERN_TESTBECH
+#ifdef STOS_TESTUNIT
+
+// <<< Use Configuration Wizard in Context Menu >>> 
+
+// <e> Enable test unit (Benchmark) 
+//   <o1> Select test unit <0=>Simple test <1=>Random data <2=>Some tests <3=>Hello world
+//	 <i> 
+// </e>
+#define STOS_PATTERN_TESTBECH				1
+#define STOS_PATTERN_TESTUNIT				3
+
+// <<< end of configuration section >>>
+
+
 
 /* This is simple test  for this module */
 void PatternSimpleTest( void ){
@@ -27,7 +39,7 @@ void PatternHelloWorld( void ){
 
 
 /* Pattern testbench selector  */
-void PatternTestBench( uint32_t select_testbench ){
+void stosTestUnit( void ){
 		switch( STOS_PATTERN_TESTUNIT ){
 			case 0:
 				//Nothing do, this is working thread
@@ -42,5 +54,7 @@ void PatternTestBench( uint32_t select_testbench ){
 				break;
 		}
 }
+
+
 
 #endif

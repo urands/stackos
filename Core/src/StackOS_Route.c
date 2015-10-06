@@ -13,14 +13,14 @@
 /*************************************************
 * Include modules
 **************************************************/
-#include <Pattern/Pattern.h>
+
 
 
 
 /*************************************************
 * Init global
 **************************************************/
-stosKernelInit( STACKOS_MODULE_COUNT );
+//stosKernelInit( STACKOS_MODULE_COUNT );
 
 /**************************************************
 *	Module defines from zero
@@ -30,9 +30,9 @@ stosKernelInit( STACKOS_MODULE_COUNT );
 */
 
 /* Pattern module defines ( ID from 0 to inv ) */
-stosModuleDef( 0 , Pattern, osPriorityNormal );
-stosModuleSendQueryDef ( Pattern, 1 );
-stosModuleRecvQueryDef ( Pattern, 1 );
+//stosModuleDef( 0 , Pattern, osPriorityNormal );
+//stosModuleSendQueryDef ( Pattern, 1 );
+//stosModuleRecvQueryDef ( Pattern, 1 );
 /**********************************************/
 
 
@@ -50,7 +50,7 @@ osStatus stosModuleInitialize( void ){
 */
 
 	
-	stosModuleInit(0, Pattern, 0 );
+//	stosModuleInit(0, Pattern, 0 );
 	
 	return osOK;
 }

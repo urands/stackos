@@ -17,12 +17,67 @@
 	#error "Port 1 cannot activate before port 0. Check configuration settings."
 #endif
 
+
 #if ( STOS_MODULE_PORT1 == 1 )
-	
+	__stosPortDef( STOS_MODULE_NAME, 2 ) = { {
+	//Define direction port
+	#if (STOS_MODULE_PORT0_DIRECTION == 0 )
+			stosInput
+	#else
+			stosOutput
+	#endif
+		,
+	//Port datatype
+	#if (STOS_MODULE_PORT0_DATATYPE == 0 )
+			stosDataRaw
+	#else
+			stosDataFormat
+	#endif
+		
+		},{ 
+	//Define direction port
+	#if (STOS_MODULE_PORT1_DIRECTION == 0 )
+			stosInput
+	#else
+			stosOutput
+	#endif
+		,
+	//Port datatype
+	#if (STOS_MODULE_PORT1_DATATYPE == 0 )
+			stosDataRaw
+	#else
+			stosDataFormat
+	#endif
+		}};
+	//__stosModule( STOS_MODULE_NAME ).port = 0; //__stosPort( STOS_MODULE_NAME );
 #elif  ( STOS_MODULE_PORT0 == 1 )
+	__stosPortDef( STOS_MODULE_NAME, 1 )  = { {
+
+	//Define direction port
+	#if (STOS_MODULE_PORT0_DIRECTION == 0 )
+			stosInput
+	#else
+			stosOutput
+	#endif
+	,
+	//Port datatype
+	#if (STOS_MODULE_PORT0_DATATYPE == 0 )
+			stosDataRaw
+	#else
+			stosDataFormat
+	#endif
+	
+	} };
+#else
 	
 #endif
 
+__stosModuleDef( STOS_MODULE_NAME ) = {
+		__stosPort( STOS_MODULE_NAME ),
+		0,
+		0,
+		0
+};
 
 
 
@@ -31,7 +86,6 @@
 
 
 //Remove definitions for module 
-
 #ifdef STOS_PORTDEFINITION 
 	#undef STOS_PORTDEFINITION
 #endif

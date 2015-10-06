@@ -21,20 +21,27 @@ typedef enum  {
 } stosPortDirection;
 
 
+typedef enum  {
+  stosDataRaw               =  0,       ///< port input; no error or event occurred.
+  stosDataFormat	          =  1,       ///< port output; signal event occurred.
+} stosPortDataType;
+
 
 /* Typedef port */
 typedef struct {
 	stosPortDirection	dir;
+	stosPortDataType	type;
 
 } stosPortDef_t;
 
 
 /* Typedef module */
 typedef struct {
+	stosPortDef_t*	port;
 	osThreadId 			tid;
 	osMessageQId*		qid_send;
 	osMessageQId*		qid_recv;
-	stosPortDef_t*	port;
+	
 
 } stosModuleDef_t;
 
@@ -42,16 +49,34 @@ typedef struct {
 	extern stosModuleDef_t	stosModule [_size];
 
 
+
+	
+//Define port array variable
 #define stosPortDef( modname, count ) \
-	const stosPortDef_t	STOS_MODULE_PORT_##modname [ count ];
+	stosPortDef_t	STOS_MODULE_PORT_##modname[ count ]
 
 #define stosPort( modname ) \
-	stosPortDef_t	STOS_MODULE_PORT_##modname
+	STOS_MODULE_PORT_##modname
 
-#define stosModuleDef( _id, modname, priority ) \
-	const uint8_t	STOS_MODULE_##modname = _id; \
-  osThreadDef( ##modname##Task, priority, 1, 0 );
+#define __stosPortDef( modname, count ) stosPortDef( modname, count )
 
+#define __stosPort( modname ) stosPort( modname )
+
+#define stosModuleDef( modname ) \
+	stosModuleDef_t STOS_MODULE_##modname
+
+#define stosModule( modname ) \
+	 STOS_MODULE_##modname
+
+#define __stosModuleDef( modname ) stosModuleDef( modname )
+
+#define __stosModule( modname ) stosModule( modname )
+ 
+/*
+#define stosModule( _id, modname, priority, ports ) \
+	stosPortDef_t	STOS_MODULE_PORTS_##modname[ ports ]; \
+	stosModuleDef_t STOS_MODULE_##modname; \
+*/
 
 #if (osFeature_MessageQ == 1 )
 

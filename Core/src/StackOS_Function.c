@@ -10,7 +10,7 @@
 
 /* GLOBAL INITIALIZER */
 
-stosModuleDef_t	stosModule[ STACKOS_MODULE_COUNT ] = {0};
+//stosModuleDef_t	stosModule[ STACKOS_MODULE_COUNT ] = {0};
 
 
 /* stosInitialize - initialize kernel objects */
@@ -23,7 +23,7 @@ osStatus stosInitialize( void ){
 	
 	//System initialize
 
-	stosModule[0].tid = 0;
+	//stosModule[0].tid = 0;
 
 	return osOK;
 }
@@ -34,7 +34,7 @@ osStatus stosStart( void ){
 	uint32_t i;
 	//Create threads
 	for(i = 0; i < STACKOS_MODULE_COUNT; ++i ){
-		stosModule[i].tid = 0;
+		//stosModule[i].tid = 0;
 	}
 	
 	

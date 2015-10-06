@@ -57,8 +57,14 @@
 
 // </h>
 
+// <q> Enable test unit (Benchmark) 
+#define STOS_TESTUNIT 0
+
 
 //-------- <<< end of configuration section >>>    --------------------
 
+#if (STOS_TESTUNIT == 0 )
+	#undef STOS_TESTUNIT
+#endif
 
 #endif

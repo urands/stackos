@@ -5,11 +5,12 @@
 *  History:
 *  						04.02.15 create
 */
-#include <StackOS.h>
+
+#include <Pattern/Pattern_Conf.h>
 #include <Pattern/Pattern.h>
 
 
-stosPortDef(Pattern, 1);
+//stosPortDef(Pattern, 1);
 
 
 void PatternInit (const uint32_t mode){
